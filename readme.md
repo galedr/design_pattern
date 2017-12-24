@@ -3,3 +3,4 @@
 2. Factory <br>
 3. Strategy <br>
 4. Chain Of Responsibility <br>
+5. Proxy <br>
