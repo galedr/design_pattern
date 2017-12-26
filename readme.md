@@ -6,3 +6,4 @@
 5. Proxy <br>
 6. Abstract Factory <br>
 7. Observer <br>
+8. Composite <br>
