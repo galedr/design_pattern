@@ -8,3 +8,4 @@
 7. Observer <br>
 8. Composite <br>
 9. Builder <br>
+10. Mediator <br>
