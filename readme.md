@@ -10,3 +10,4 @@
 9. Builder <br>
 10. Mediator <br>
 11. Visitor <br>
+12. Prototype <br>
