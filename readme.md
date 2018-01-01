@@ -12,3 +12,4 @@
 11. Visitor <br>
 12. Prototype <br>
 13. Command <br>
+14. Memento <br>
