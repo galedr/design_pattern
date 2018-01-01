@@ -8,5 +8,4 @@ $lose = new Lose();
 
 echo $win->getResult(new SlotGameReaction()) . '<br>';
 echo $win->getResult(new CardGameReaction()) . '<br>';
-echo $lose->getResult(new StampGameReaction());
-
+echo $lose->getResult(new StampGameReaction()) . '<br>';

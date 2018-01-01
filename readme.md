@@ -11,3 +11,4 @@
 10. Mediator <br>
 11. Visitor <br>
 12. Prototype <br>
+13. Command <br>

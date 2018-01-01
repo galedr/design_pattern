@@ -1,0 +1,32 @@
+{
+  "Comic":
+    {
+      "Newest":
+        {
+          "title": "漫畫頻道最新文章"
+        },
+      "Hot":
+        {
+          "title": "漫畫頻道熱門文章"
+        },
+      "Sponsored":
+        {
+          "title": "漫畫頻道業配文章"
+        }
+    },
+  "Game":
+    {
+      "Newest":
+      {
+        "title": "遊戲頻道最新文章"
+      },
+      "Hot":
+      {
+        "title": "遊戲頻道熱門文章"
+      },
+      "Sponsored":
+      {
+        "title": "遊戲頻道業配文章"
+      }
+    }
+}
