@@ -2,19 +2,20 @@
 // Invoker，命令請求者
 class ArticleGetter
 {
-    private $channels = array();
+    private $commands = array();
 
-    public function setCommand(ICommand $command)
+    public function setCommand($key, ICommand $command)
     {
-        $this->channels[] = $command;
+        $this->commands[$key] = $command;
     }
 
-    public function execute()
+    public function removeCommand($key)
     {
-        $data = array();
-        foreach ($this->channels as $key => $command) {
-            $data[] = $command->execute();
-        }
-        return $data;
+        unset($this->commands[$key]);
+    }
+
+    public function execute($key)
+    {
+        return $this->commands[$key]->execute();
     }
 }

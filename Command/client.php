@@ -11,10 +11,12 @@ $game = new GameArticles();
 $hot = new GetHotArticles($comic);
 $newest = new GetNewestArticles($comic);
 
-$getter->setCommand($hot);
-$getter->setCommand($newest);
-$getter->setCommand(new GetSponsored($comic));
-$getter->setCommand(new GetHotArticles($game));
+$getter->setCommand(0, $hot);
+$getter->setCommand(1, $newest);
+$getter->setCommand(2, new GetSponsored($comic));
+$getter->setCommand(3, new GetHotArticles($game));
 
-$result = $getter->execute();
+$result = $getter->execute(0);
+print_r($result);
+$result = $getter->execute(1);
 print_r($result);
