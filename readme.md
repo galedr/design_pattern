@@ -15,3 +15,4 @@
 14. Memento <br>
 15. Interpreter <br>
 16. Bridge <br>
+17. Facade <br>
