@@ -28,3 +28,11 @@ class Mario implements IMinion
         return '馬力歐出現了！';
     }
 }
+
+class Kenny implements IMinion
+{
+    public function create()
+    {
+        return '林中一出現了！';
+    }
+}

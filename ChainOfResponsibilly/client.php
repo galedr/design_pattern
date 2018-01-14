@@ -4,16 +4,18 @@ include 'Handler.php';
 include 'Dealer.php';
 //處理者實體化
 
-$friend = new FriendZone();
-$ambiguous = new AmbiguousZone();
-$lover = new LoverZone();
+$json = new JsonParser();
+$log = new LogParser();
+$csv = new CSVParser();
 
 //組合權限順序
-$friend->setNext($ambiguous);
-$ambiguous->setNext($lover);
+$json->setNext($log);
+$log->setNext($csv);
 
-$request = new Request('牽手');
-$friend->response($request);
+$request = new Request('CSV');
+$result = $json->response($request);
+
+echo $result;
 
 
 

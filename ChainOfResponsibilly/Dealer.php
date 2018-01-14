@@ -1,47 +1,43 @@
 <?php
 
-class FriendZone extends Handler
+class JsonParser extends Handler
 {
-    protected $capability = array('吃飯');
+    protected $capability = array('json');
 
     public function response(Request $request)
     {
         if (in_array($request->doRequest(), $this->capability)) {
-            echo '好朋友的話' . $request->doRequest() . '還可以，你好臭，離我遠一點';
+            return '經過處理的' . $request->doRequest() . '檔案 <br>';
         } else {
-            if ($this->next != null) {
-                $this->next->response($request);
-            }
+            return parent::response($request);
         }
     }
 }
 
-class AmbiguousZone extends Handler
+class LogParser extends Handler
 {
-    protected $capability = array('牽手', '擁抱');
+    protected $capability = array('log');
 
     public function response(Request $request)
     {
         if (in_array($request->doRequest(), $this->capability)) {
-            echo '有曖昧的話' . $request->doRequest() . '沒關係，但是你好臭，離我遠一點';
+            return '經過處理的' . $request->doRequest() . '檔案 <br>';
         } else {
-            if ($this->next != null) {
-                $this->next->response($request);
-            }
+            return parent::response($request);
         }
     }
 }
 
-class LoverZone extends Handler
+class CSVParser extends Handler
 {
-    protected $capability = array('接吻');
+    protected $capability = array('CSV');
 
     public function response(Request $request)
     {
         if (in_array($request->doRequest(), $this->capability)) {
-            echo '情侶的話' . $request->doRequest() . '當然可以囉，你好臭，離我遠一點';
+            return '經過處理的' . $request->doRequest() . '檔案 <br>';
         } else {
-            echo '你想幹嘛，我不知道' . $request->doRequest() . '是啥，你再不走我要報警囉';
+            return parent::response($request);
         }
     }
 }

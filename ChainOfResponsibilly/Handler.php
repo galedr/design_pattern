@@ -9,7 +9,14 @@ abstract class Handler
         $this->next = $handler;
     }
 
-    abstract public function response(Request $request);
+    protected function response(Request $request)
+    {
+        if ($this->next != null) {
+            return $this->next->response($request);
+        } else {
+            return '無法處理的檔案類型';
+        }
+    }
 }
 
 class Request
