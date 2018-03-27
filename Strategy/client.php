@@ -1,17 +1,18 @@
 <?php
 
-require 'PositionMethod.php';
-require 'PursueStrategy.php';
+require 'CheckoutMethods.php';
+require 'Strategy.php';
 
-$strategy = new PowerStrategy(new Gym());
+$bill = 1000;
+$strategy = new CouponFeedBack(new WebATM($bill));
 $strategy->move();
 
 echo '<br>';
 
-$strategy = new ArtStrategy(new Park());
+$strategy = new TenPercentOff(new Coupon($bill));
 $strategy->move();
 
 echo '<br>';
 
-$strategy = new ForgiveStrategy(new PoliceStation());
+$strategy = new Normal(new VISA($bill));
 $strategy->move();
