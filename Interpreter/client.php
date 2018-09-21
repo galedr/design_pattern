@@ -16,7 +16,7 @@ foreach ($list as $k => $method) {
 echo $source;
 
 // 使用config 包裝方法的練習案例
-$method = new MethodConfig();
+$method = new Methods();
 
 $list = $method->getConfig('ent');
 

@@ -23,7 +23,7 @@ class ProcessOne implements SubjectTwoInterface
     public function notify()
     {
         foreach ($this->observer as $obserber) {
-            $obserber->update($this);
+            $obserber->update(d$this);
         }
     }
 }
