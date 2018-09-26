@@ -12,5 +12,4 @@ $subject->addObserver($observerC);
 $subject->notify();
 
 $observerA->response();
-$observerB->response();
 $observerC->response();
